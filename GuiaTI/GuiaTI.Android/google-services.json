@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "607752485560",
+    "firebase_url": "https://blogti-e4282.firebaseio.com",
+    "project_id": "blogti-e4282",
+    "storage_bucket": "blogti-e4282.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607752485560:android:26701e8a65b6b5ab",
+        "android_client_info": {
+          "package_name": "guiatI.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607752485560-n26aa7cmtcokch2qm0096t8ci7a63tl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9RTghq8PHqs45VVupqNiZ0AbFrmKgQrI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

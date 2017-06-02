@@ -4,8 +4,22 @@
              xmlns:local="clr-namespace:GuiaTI"
              x:Class="GuiaTI.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+        <Label Text="Bem vindo ao Guia de TI" FontSize="Large" />
+
+        <StackLayout Orientation="Horizontal" Margin="0, 50, 0, 50">
+            <Label Text="Você aceita os termos de uso?" FontSize="Medium" />
+            <Switch IsToggled="{Binding TermoAceito}"></Switch>
+        </StackLayout>
+
+        <Label Text="Autentique-se para acessar o sistema!" FontSize="Large" Margin="0, 10, 0, 10"  />
+
+        <Button Text="Logar com Facebook" Command="{Binding LoginCommand}" IsEnabled="{Binding TermoAceito}" 
+                BackgroundColor="Blue"
+                HeightRequest="70"
+                FontSize="Large" TextColor="White">
+
+        </Button>
+    </StackLayout>
 
 </ContentPage>
