@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuiaTI.NewBlogPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Preencha os campos abaixo para cadastrar um novo blog!" />
+            <Entry Placeholder="Blog" />
+            <Entry Placeholder="Site" />
+            <Entry Placeholder="Descrição" MinimumHeightRequest="100" />
+            <Button Text="Cadastrar" Command="{Binding CadastrarCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
