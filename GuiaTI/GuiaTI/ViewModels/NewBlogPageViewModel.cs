@@ -81,7 +81,7 @@ namespace GuiaTI.ViewModels
         {
             if (string.IsNullOrWhiteSpace(Name))
             {
-                Warning = "Título é obrigatório";
+                Warning = "Nome é obrigatório";
                 return;
             }
 

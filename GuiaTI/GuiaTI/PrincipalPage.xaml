@@ -11,16 +11,24 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="{Binding Banner}" />
-            <ListView HasUnevenRows="true" SeparatorVisibility="None"  ItemsSource="{Binding Contents}"  ItemSelected="ListView_OnItemSelected">
+            <ListView x:Name="ContentList" HasUnevenRows="true" SeparatorVisibility="None"  ItemsSource="{Binding Contents}"  ItemSelected="ListView_OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame Padding="20">
-                                <StackLayout Orientation="Vertical">
+                            <Grid x:Name="Item" Padding="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0">
                                     <Label Text="{Binding Name}" Margin="20, 10, 20, 0" FontAttributes="Bold" FontSize="Large" />
-                                    <Label Text="{Binding Description}" Margin="20, 10, 20, 0" FontSize="Small" />
+                                    <Label Text="{Binding Description}" HorizontalOptions="StartAndExpand" Margin="20, 10, 20, 0" FontSize="Small" />
                                 </StackLayout>
-                            </Frame>
+                                <Button Grid.Column="1"  Grid.Row="0" BindingContext="{Binding Source={x:Reference ContentList}, Path=BindingContext}" Command="{Binding DropCommand}" CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}" Text="Apagar" />
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

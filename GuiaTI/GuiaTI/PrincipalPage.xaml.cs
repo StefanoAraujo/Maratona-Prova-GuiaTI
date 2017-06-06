@@ -11,7 +11,7 @@ namespace GuiaTI
         public PrincipalPage()
         {
             InitializeComponent();
-            BindingContext = new PrincipalPageViewModel();
+            BindingContext = new PrincipalPageViewModel(Navigation);
         }
 
         private void ListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
